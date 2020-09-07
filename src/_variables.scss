@@ -1,0 +1,14 @@
+//variables
+$primary-color: #009900;
+$secondary-color: #003300;
+$warning-color: #b30000;
+$light-color: #fff;
+
+//functions
+@function set-color($color) {
+    @if(lightness($color) > 40) {
+        @return $light-color;
+    }@else {
+        @return #000;
+    }
+}

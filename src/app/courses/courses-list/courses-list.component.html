@@ -1,0 +1,4 @@
+<ng-container *ngFor="let course of beginnerCourses$ | async">
+    <app-course [course]="course"></app-course>
+    <div class="border-bottom py-1"></div>
+</ng-container>

@@ -1,0 +1,127 @@
+//utilti
+.form {
+    .form-group {
+        display: block;
+        padding: 0.75rem;
+        
+        label {
+            display: block;
+            width: 100%;
+        }
+        .form-control,
+        input[type='submit'] {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-control {
+            width: 90%;
+        }
+        input {
+            padding: 0.5rem;
+        }
+    }
+}
+
+
+//button
+%btn {
+    padding: 0.75rem 2rem;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn {
+    &-primary {
+        @extend %btn;
+        background-color: $primary-color;
+        color: $light-color;
+    }
+    &-secondary {
+        @extend %btn;
+        background-color: $secondary-color;
+        color: $light-color;
+    }
+    &-warning {
+         @extend %btn;
+        background-color: $warning-color;
+        color: $light-color;
+    }
+    &-round {
+        background-color: $secondary-color;
+        border: none;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        color: $light-color;
+    }
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #ddd;
+}
+
+//bg color
+.bg {
+    &-primary {
+        background-color: $primary-color;
+        color: set-color($primary-color);
+    }
+    &-secondary {
+        background-color: $secondary-color;
+        color: set-color($secondary-color);
+    }
+}
+
+//padding
+.py {
+    &-1 {
+        padding: 1rem;
+    }
+    &-2 {
+        padding: 2rem;
+    }
+    &-3 {
+        padding: 3rem;
+    }
+}
+
+//loader
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: $primary-color;
+  margin: 100px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+
+
+
+
+

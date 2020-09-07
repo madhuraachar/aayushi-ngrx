@@ -1,0 +1,17 @@
+<section id="section-login">
+    <form class="form" [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="" class="form-control" formControlName="email" id="">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="" class="form-control" id="" formControlName="password">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn-secondary" [disabled]="! loginForm.valid">Login</button>
+            <!-- <app-loader></app-loader> -->
+        </div>
+    </form>
+</section>
+

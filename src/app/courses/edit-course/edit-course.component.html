@@ -1,0 +1,13 @@
+
+
+<h1 mat-dialog-title>{{mode === 'edit' ? course.name : 'Add New Course'}}</h1>
+<div mat-dialog-content>
+  <p *ngIf="mode !== 'edit'">Name: {{course.name}}</p> 
+  <p >Course Img: {{course.img}}</p> 
+  <p>Duration: {{course.duration}}</p> 
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="close()">Cancel</button>
+  <button mat-button (click)="addOrEdit()"  cdkFocusInitial>{{mode === 'edit' ? 'Save' : 'Add'}}</button>
+</div>
+ 

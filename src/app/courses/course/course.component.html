@@ -1,0 +1,16 @@
+<div class="course">
+    <div class="course-name">
+        <h4>{{course.name}}</h4>
+    </div>
+    <div class="course-img">
+        <img src="{{course.img}}" alt="" srcset="">
+    </div>
+    <div class="course-duration py-1"> {{course.duration}}</div>
+    <div class="course-action">
+        <button (click)="onEdit()" class="btn-primary">Edit</button>
+        <button (click)="onDelete()" class="btn-warning">Delete</button>
+    </div>
+    
+</div>
+
+
